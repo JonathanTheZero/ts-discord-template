@@ -37,7 +37,7 @@ connectToDB()
         /*
         Reacting to different events
         */
-        client.on('ready', client => readyEvent(client, config.status || "NANO"));
+        client.on('ready', client => readyEvent(client, config.status));
         client.on('messageCreate', message => messageEvent(client, message));
         client.on('guildMemberAdd', member => guildMemberAddEvent(client, member));
         client.on('guildMemberRemove', member => guildMemberRemoveEvent(client, member));
